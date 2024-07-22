@@ -1,5 +1,5 @@
 import React from 'react';
-import ProfilePicture from './ProfilePicture'; // Subcomponent for profile picture
+import ProfilePicture from '../ProfilePicture'; // Subcomponent for profile picture
 
 const IntroPage = () => {
   return (
@@ -31,3 +31,5 @@ const IntroPage = () => {
     </div>
   );
 };
+
+export default IntroPage;
