@@ -1,43 +1,29 @@
-.intro-page {
+#intro-page {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  min-height: 100vh; /* Set minimum height for full viewport */
-  background-color: #f0f0f0; /* Example background color */
+  min-height: 100vh;
+  gap: 30px;
 }
 
-.profile-picture-container {
-  margin-bottom: 50px; /* Example spacing */
+.portrait-picture-container {
+  width: 500px;
+  height: auto;
+  overflow: hidden;
+}
+
+.portrait-picture {
+  width: 400px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 60px;
 }
 
 .intro-text {
   text-align: center;
-  max-width: 500px; /* Example max-width for text area */
+  max-width: 500px; 
 }
 
 .intro-text h1 {
-  font-size: 2em; /* Example font size */
-  margin-bottom: 10px; /* Example spacing */
-}
-
-.navigation {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 50px; /* Example spacing */
-}
-
-.navigation ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.navigation li {
-  display: inline-block;
-  margin-right: 20px; /* Example spacing */
-}
-
-.navigation li.active {
-  font-weight: bold;
+  font-size: 2em; 
+  margin-bottom: 10px; 
 }

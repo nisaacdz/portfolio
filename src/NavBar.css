@@ -1,26 +1,90 @@
-
 #navbar {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 100%;
     position: relative;
+    height: 100%;
+}
+
+.profile-photo {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.title-text {
+    position: absolute;
+    left: 20px;
+    top: 0px;
+    height: 100%;
+}
+
+.profile-photo img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.popup {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    width: 120px;
+    height: auto;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1000;
+}
+
+.popup ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+.popup li {
+    margin-bottom: 10px;
+}
+
+.popup li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.popup li a:hover {
+    color: #666;
 }
 
 #navbar ul {
     list-style-type: none;
-    display: flex;
-    gap: 15px;
+    position: absolute;
+    right: 55px;
+    top: 0;
     height: 100%;
-    padding: 10px;
+    display: flex;
+    align-items: center;
 }
 
 #navbar li {
-    color: goldenrod;
+    display: inline-block;
+    margin-right: 10px;
     cursor: pointer;
 }
 
-#navbar .activeTab {
-    color: white;
+#navbar a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px;
 }
 
+#navbar a:hover {
+    color: #666;
+}

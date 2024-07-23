@@ -1,75 +1,106 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ProjectsPage.css";
+
 
 const projects = [
   {
-    demo_link: "https://drive.google.com/file/d/177dXOQdLB45emzZHXM4IXEhSJsjFg0z6/view?usp=sharing",
     title: "Pitou",
     description: "Pitou is my biggest personal project so far. It is an extremely fast file explorer powered by Tauri. The frontend is frontend is built with Yew.rs and the backend is built with Rust. It has all common file operations plus safe folder, recycle bin, and other cool features. Demo currently available for Windows only.",
-    deployed_to: "",
-    usage: "",
+    demo_link: "../../../demo_pitou.gif",
+    deployed_to: "dljdsljs",
+    usage: "dlsjdls",
     codebase: "https://github.com/nisaacdz/pitou",
-  },{
-    demo_gif: "../../../demo_bloxel.gif",
+  },
+  {
     title: "Bloxel",
     description: "Bloxel is a lecture board cross-platform application built with React, Tauri, C++, Python, Rust. Incoporates design chalks, straight line corrections and more. You can save your work and share it with others as pdf, jpeg or ppt.",
+    demo_link: "../../../demo_bloxel.gif",
     deployed_to: "",
     usage: "",
     codebase: "https://github.com/nisaacdz/bloxel",
-  },{
-    demo_gif: "",
-    title: "Lecture board App",
-    description: "A cross-platform application built with React, Tauri, C++, Python, Rust.",
-    deployed_to: "",
-    usage: "",
-    codebase: "",
   },
   {
-    demo_gif: "",
-    title: "Lecture board App",
-    description: "A cross-platform application built with React, Tauri, C++, Python, Rust.",
+    title: "Bloxel",
+    description: "Bloxel is a lecture board cross-platform application built with React, Tauri, C++, Python, Rust. Incoporates design chalks, straight line corrections and more. You can save your work and share it with others as pdf, jpeg or ppt.",
+    demo_link: "../../../demo_bloxel.gif",
     deployed_to: "",
     usage: "",
-    codebase: "",
+    codebase: "https://github.com/nisaacdz/bloxel",
   },
   {
-    demo_gif: "",
-    title: "Lecture board App",
-    description: "A cross-platform application built with React, Tauri, C++, Python, Rust.",
+    title: "Bloxel",
+    description: "Bloxel is a lecture board cross-platform application built with React, Tauri, C++, Python, Rust. Incoporates design chalks, straight line corrections and more. You can save your work and share it with others as pdf, jpeg or ppt.",
+    demo_link: "../../../demo_bloxel.gif",
     deployed_to: "",
     usage: "",
-    codebase: "",
-  },
+    codebase: "https://github.com/nisaacdz/bloxel",
+  }
 ];
 
-const ProjectCard = ({project}) => {
-    return (
-        <div className="project-card">
-          <video autoplay loop muted playsinline>
-            <source src={project.demo_link} type="video/mp4"/>
-            Your browser does not support the video tag.
-          </video>
+const ProjectCard = ({ project }) => {
+  const { title, description, demo_link, codebase, deployed_to, usage } = project;
 
-            <h2 className="project-title">{project.title}</h2>
-            <p className="project-description">{project.description}</p>
-            <a href={project.codebase} target="_blank" className="project-link">View Code</a>
-        </div>
-    );
-}
+  return (
+    <div className="project-card">
+      <img className="project-demo" src={demo_link} alt="Project Demo" />
+      <h2 className="project-title">{title}</h2>
+      <p className="project-description">{description}</p>
+      <a href={codebase} target="_blank" rel="noreferrer" className="project-link">
+        View Code
+      </a>
+      {deployed_to && (
+        <p className="project-deployed-to">
+          Deployed to: <a href={deployed_to}>{deployed_to}</a>
+        </p>
+      )}
+
+      {deployed_to && usage && (
+        <p className="project-usage">
+          Usage: {usage}
+        </p>
+      )}
+    </div>
+  );
+};
 
 const ProjectsPage = () => {
-    return (
+  const [projectIdx, setProjectIdx] = useState(0);
+
+  const handleNextProject = () => {
+    if (projectIdx < projects.length - 1) {
+      setProjectIdx(projectIdx + 1);
+    }
+  };
+
+  const handlePreviousProject = () => {
+    if (projectIdx > 0) {
+      setProjectIdx(projectIdx - 1);
+    }
+  };
+
+  return (
+    <div id="projects-page">
+      <div className="projects-container">
         <div>
-            <h1>My personal projects</h1>
-            <div className="projects-container">
-                {
-                projects.map((project, index) => (
-                    <ProjectCard key={index} project={project} />
-                ))
-                }
-            </div>
+          <button
+            onClick={handlePreviousProject}
+            disabled={projectIdx === 0}
+            className="btn"
+          >
+            Previous
+          </button>
+          <button
+            onClick={handleNextProject}
+            disabled={projectIdx === projects.length - 1}
+            className="btn"
+          >
+            Next
+          </button>
         </div>
-    );
+        <ProjectCard project={projects[projectIdx]} />
+      </div>
+    </div>
+  );
 };
 
 export default ProjectsPage;
