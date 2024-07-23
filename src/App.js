@@ -4,6 +4,7 @@ import IntroPage from './pages/intro/IntroPage';
 import ProjectsPage from './pages/projects/ProjectsPage';
 import ExperiencePage from './pages/experience/ExperiencePage';
 import ResumePage from './pages/resume/ResumePage';
+import NavBar from './NavBar';
 
 
 function App() {
@@ -27,16 +28,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <nav className="navigation">
-          <ul>
-            <li className={pageIdx === 0 ? "active" : ""} onClick={() => updatePage(0)}>Intro</li>
-            <li className={pageIdx === 1 ? "active" : ""} onClick={() => updatePage(1)}>Projects</li>
-            <li className={pageIdx === 2 ? "active" : ""} onClick={() => updatePage(2)}>Experience</li>
-            <li className={pageIdx === 3 ? "active" : ""} onClick={() => updatePage(3)}>Resume</li>
-          </ul>
-        </nav>
+        <NavBar pageIdx={pageIdx} updatePage={updatePage}/>
       </header>
-      <main>
+      <main className="App-body">
         {body}
       </main>
     </div>

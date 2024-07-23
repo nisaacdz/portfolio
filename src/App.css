@@ -1,37 +1,25 @@
-/* App.css */
-
-/* Reset default margin and padding */
 body, ul {
     margin: 0;
     padding: 0;
 }
 
-/* Style the navigation bar */
-.navbar {
+body {
+    font-family: Arial, sans-serif;
+    background-color: #282c34;
+    text-align: center;
+}
+
+.App-header {
+    width: 100%;
+    min-height: 10vh;
+    color: goldenrod;
     background-color: #333;
-    color: #fff;
+}
+
+.App-body {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    padding: 10px;
-}
-
-/* Style the navigation links */
-.navbar ul {
-    list-style-type: none;
-    display: flex;
-}
-
-.navbar li {
-    margin-right: 10px;
-}
-
-.navbar a {
-    color: #fff;
-    text-decoration: none;
-    padding: 5px;
-}
-
-.navbar a:hover {
-    text-decoration: underline;
+    justify-content: center;
+    min-height: 50vh;
 }

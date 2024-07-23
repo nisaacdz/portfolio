@@ -1,0 +1,26 @@
+
+#navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+#navbar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+    height: 100%;
+    padding: 10px;
+}
+
+#navbar li {
+    color: goldenrod;
+    cursor: pointer;
+}
+
+#navbar .activeTab {
+    color: white;
+}
+
