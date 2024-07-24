@@ -6,6 +6,9 @@ import ExperiencePage from "./pages/experience/ExperiencePage";
 import ResumePage from "./pages/resume/ResumePage";
 import NavBar from "./NavBar";
 
+const madeBy = "Isaac Newton";
+const year = "2024";
+
 const color_themes = [
   {
     "--background_color1": "#f0f0f0",
@@ -76,6 +79,9 @@ function App() {
         />
       </header>
       <main className="App-body">{body}</main>
+      <footer className="App-footer">
+        <p>{`Made from scratch with 💙 by ${madeBy} in ${year}`}</p>
+      </footer>
     </div>
   );
 }
