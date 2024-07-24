@@ -7,9 +7,11 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     max-width: 800px;
+    background-color: var(--background_color3);
 }
 
 iframe {
+    background-color: var(--background_color2);
     border-radius: 8px;
     width: 500px;
     height: 600px;

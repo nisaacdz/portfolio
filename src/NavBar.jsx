@@ -1,41 +1,18 @@
-import React, {useEffect, useRef} from "react";
+import React, { useEffect, useRef } from "react";
 import "./NavBar.css";
 
-const Popup = ({ show, onClose }) => {
-  const ref = useRef(null);
+const introPageTitle = "Welcome to my portfolio";
+const projectsPageTitle = "My projects";
+const experiencePageTitle = "My experience";
+const resumePageTitle = "My resume";
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (ref.current && !ref.current.contains(event.target)) {
-        onClose();
-      }
-    };
-
-    document.addEventListener('click', handleClickOutside, true);
-    return () => {
-      document.removeEventListener('click', handleClickOutside, true);
-    };
-  }, [onClose]);
-
-    if (!show) return null;
-
-    return (
-        <div className="popup">
-            <ul>
-                <li><a href="https://github.com/nisaacdz" target="_blank" rel="noopener noreferrer">Follow me on GitHub</a></li>
-                <li><a href="mailto:nisaacdz@gmail.com">Email me</a></li>
-                <li><a href="https://www.linkedin.com/in/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a></li>
-                <li><a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">Share with me on Twitter</a></li>
-            </ul>
-        </div>
-    );
-};
-
-const NavBar = ({ pageIdx, updatePage }) => {
+const NavBar = ({ pageIdx, updatePage, toggleTheme }) => {
   const [showPopup, setShowPopup] = React.useState(false);
 
   const handleProfileClick = () => {
-    setShowPopup(!showPopup);
+    setShowPopup((prevShowPopup) => {
+      return !prevShowPopup;
+    });
   };
 
   const onClosePopup = () => {
@@ -44,18 +21,21 @@ const NavBar = ({ pageIdx, updatePage }) => {
 
   let titleText;
   if (pageIdx === 0) {
-    titleText = "Welcome to my portfolio";
+    titleText = introPageTitle;
   } else if (pageIdx === 1) {
-    titleText = "My projects";
+    titleText = projectsPageTitle;
   } else if (pageIdx === 2) {
-    titleText = "My experience";
+    titleText = experiencePageTitle;
   } else {
-    titleText = "My resume";
+    titleText = resumePageTitle;
   }
 
   return (
     <nav id="navbar">
-      <h1 className="title-text">{titleText}</h1>
+      <div className="page-title">
+        <button className="theme-button" onClick={toggleTheme} title="toggle color themes"/>
+        <h1 className="title-text">{titleText}</h1>
+      </div>
       <ul>
         <li
           className={pageIdx === 0 ? "activeTab" : "inactiveTab"}
@@ -83,10 +63,70 @@ const NavBar = ({ pageIdx, updatePage }) => {
         </li>
       </ul>
       <div className="profile-photo">
-        <img src="../../../profile_photo.jpeg" alt="Profile" onClick={handleProfileClick}/>
+        <img
+          src="../../../profile_photo.jpeg"
+          alt="Profile"
+          onClick={handleProfileClick}
+        />
       </div>
-      <Popup show={showPopup} onClose={onClosePopup}/>
+      <Popup show={showPopup} onClose={onClosePopup} />
     </nav>
+  );
+};
+
+const Popup = ({ show, onClose }) => {
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (ref.current && !ref.current.contains(event.target)) {
+        onClose();
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside, true);
+    return () => {
+      document.removeEventListener("click", handleClickOutside, true);
+    };
+  }, [onClose]);
+
+  if (!show) return null;
+
+  return (
+    <div className="popup" ref={ref}>
+      <ul>
+        <li>
+          <a href="mailto:nisaacdz@gmail.com">Email me</a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/nisaacdz"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Follow me on GitHub
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Connect on LinkedIn
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://twitter.com/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Share with me on Twitter
+          </a>
+        </li>
+      </ul>
+    </div>
   );
 };
 

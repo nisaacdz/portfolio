@@ -1,0 +1,71 @@
+#experience-page {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: var(--foreground_color1);
+    background-color: var(--background_color1);
+}
+
+.referral-container {
+    background-color: var(--background_color3);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.referral-container h1 {
+    color: var(--foreground_color2);
+}
+
+.referral-container h2 {
+    color: var(--foreground_color1);
+}
+
+.referral-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.referral-container li {
+    background-color: var(--background_color2);
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.referral-container a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #0073b1;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.referral-container a:hover {
+    background-color: #005582;
+}
+
+.experiences {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.experience {
+    background-color: var(--background_color3);
+    padding: 20px;
+    border: 1px solid var(--background_color2);
+    border-radius: 8px;
+}
+
+.experience h3 {
+    margin: 0 0 10px;
+    color: var(--foreground_color1);
+}
+
+.experience p {
+    margin: 5px 0;
+    color: var(--foreground_color2);
+}

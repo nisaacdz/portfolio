@@ -1,72 +1,67 @@
-#projects-page {
-    text-align: center;
-    padding: 20px;
-}
-
 .projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: var(--background_color3)
+  }
+  
+  .project-card {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+    justify-content: space-between;
+    overflow: hidden;
+    width: 300px;
+    background-color: var(--background_color2);
+    transition: transform 0.3s;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .project-title {
+    font-size: 1.5em;
+    margin: 16px;
+    color: var(--foreground_color1);
+  }
+  
+  .project-description {
+    font-size: 1em;
+    margin: 16px;
+    color: var(--foreground_color3);
+  }
 
-.project-card {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    padding: 20px;
-    margin: 20px;
-    text-align: left;
-}
-
-.project-demo {
+  .project-stack {
+    font: bold;
+    font-size: 1.1rem;
+    color: var(--foreground_color1);
+  }
+  
+  .project-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+  }
+  
+  .project-demo {
     max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-.project-title {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.project-description {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-.project-link, .project-deployed-to a {
-    display: block;
-    margin: 10px 0;
-    color: #007bff;
+    border-radius: 4px;
+  }
+  
+  .project-codebase {
     text-decoration: none;
-}
-
-.project-link:hover, .project-deployed-to a:hover {
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  .project-codebase:hover {
     text-decoration: underline;
-}
-
-.project-usage {
-    font-size: 14px;
-    color: #555;
-}
-
-.btn {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    margin: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.btn:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-}
-
-.btn:hover:not(:disabled) {
-    background-color: #0056b3;
-}
+  }
+  
