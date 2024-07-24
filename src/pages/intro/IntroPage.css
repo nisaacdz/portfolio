@@ -1,6 +1,7 @@
 #intro-page {
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
   min-height: 100vh;
   gap: 30px;
 }
@@ -12,18 +13,38 @@
 }
 
 .portrait-picture {
-  width: 400px;
+  width: 300px;
   height: auto;
+  border-radius: 50%;
   object-fit: cover;
-  border-radius: 60px;
+  border: 5px solid #fff;
 }
+
 
 .intro-text {
   text-align: center;
-  max-width: 500px; 
+  max-width: 500px;
+  color: var(--foreground_color1);
 }
 
 .intro-text h1 {
   font-size: 2em; 
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  margin-top: 20px;
+}
+
+.social-buttons img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s;
+}
+
+.social-buttons img:hover {
+  transform: scale(1.1);
 }
