@@ -61,6 +61,13 @@ export const person = {
       codebase: "https://github.com/nisaacdz/portfolio_website",
     },
     {
+      title: "Scientific Calculator",
+      description: "A desktop calculator app written in Java with Java Swing.",
+      demo_link: `${public_url}/demos/demo_calcus.gif`,
+      stack: "Java, , Java Swing, MWC pattern",
+      codebase: "https://github.com/nisaacdz/NCALCULATOR",
+    },
+    {
       title: "cleanli",
       description:
         "A startup online-based organization that handles environmentally safe disposal and recycling of household wastes.",

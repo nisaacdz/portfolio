@@ -53,6 +53,11 @@
       "sizes": "269x116"
     },
     {
+      "src": "demos/demo_calcus.gif",
+      "type": "image/gif",
+      "sizes": "800x431"
+    },
+    {
       "src": "demos/demo_portfolio.gif",
       "type": "image/gif",
       "sizes": "800x431"
