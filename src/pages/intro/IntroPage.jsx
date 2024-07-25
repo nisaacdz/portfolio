@@ -2,8 +2,11 @@ import React from "react";
 import "./IntroPage.css";
 import { message, name } from "./message";
 import Typewriter from "./TypeWriter";
+import portrait_picture from "../../photos/portrait_picture.jpg";
+import gmail_logo from "../../photos/gmail.png";
+import linkedin_logo from "../../photos/linkedin.png";
+import github_logo from "../../photos/github.png";
 
-const portrait_picture = "/portrait_picture.jpg";
 const github = "https://github.com/nisaacdz";
 const linkedin = "https://www.linkedin.com/in/isaac-dzikum-401033225/";
 const gmail = "nisaacdz@gmail.com";
@@ -24,15 +27,15 @@ const IntroPage = () => {
         />
         <div className="social-buttons">
           <a href={`mailto:${gmail}`}>
-            <img src="/logos/gmail.png" alt="Gmail" />
+            <img src={gmail_logo} alt="Gmail" />
           </a>
           <span className='divider'></span>
           <a href={linkedin} target="_blank" rel="noopener noreferrer">
-            <img src="/logos/linkedin.png" alt="LinkedIn" />
+            <img src={linkedin_logo} alt="LinkedIn" />
           </a>
           <span className='divider'></span>
           <a href={github} target="_blank" rel="noopener noreferrer">
-            <img src="/logos/github.png" alt="GitHub" />
+            <img src={github_logo} alt="GitHub" />
           </a>
         </div>
       </div>
