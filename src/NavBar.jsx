@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "./NavBar.css";
+import profile_photo from "./photos/profile_photo.jpeg";
 
 const introPageTitle = "Welcome to my portfolio";
 const projectsPageTitle = "My projects";
@@ -69,7 +70,7 @@ const NavBar = ({ pageIdx, updatePage, toggleTheme }) => {
       </ul>
       <div className="profile-photo">
         <img
-          src="/profile_photo.jpeg"
+          src={profile_photo}
           alt="Profile"
           onClick={handleProfileClick}
         />

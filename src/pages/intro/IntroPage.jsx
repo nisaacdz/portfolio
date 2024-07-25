@@ -3,9 +3,9 @@ import "./IntroPage.css";
 import { message, name } from "./message";
 import Typewriter from "./TypeWriter";
 import portrait_picture from "../../photos/portrait_picture.jpg";
-import gmail_logo from "../../photos/gmail.png";
-import linkedin_logo from "../../photos/linkedin.png";
-import github_logo from "../../photos/github.png";
+import gmail_logo from "../../logos/gmail.png";
+import linkedin_logo from "../../logos/linkedin.png";
+import github_logo from "../../logos/github.png";
 
 const github = "https://github.com/nisaacdz";
 const linkedin = "https://www.linkedin.com/in/isaac-dzikum-401033225/";

@@ -1,7 +1,13 @@
 {
   "short_name": "portfolio",
   "name": "nisaacdz's Portfolio",
-  "icons": [],
+  "icons": [
+    {
+      "src": "title_photo.png",
+      "type": "image/png",
+      "sizes": "200x200"
+    }
+  ],
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
