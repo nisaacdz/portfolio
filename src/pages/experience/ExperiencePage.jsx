@@ -2,18 +2,18 @@ import React from 'react';
 import './ExperiencePage.css';
 
 const experiences = [
-    {
-        company: "Tech Solutions Inc.",
-        position: "Software Engineer",
-        duration: "Jan 2020 - Present",
-        description: "Developed and maintained web applications using React and Node.js. Collaborated with cross-functional teams to deliver high-quality software solutions."
-    },
-    {
-        company: "Innovative Apps",
-        position: "Frontend Developer",
-        duration: "Jun 2018 - Dec 2019",
-        description: "Designed and implemented user interfaces for web applications. Worked closely with designers to create visually appealing and user-friendly experiences."
-    }
+    // {
+    //     company: "Tech Solutions Inc.",
+    //     position: "Software Engineer",
+    //     duration: "Jan 2020 - Present",
+    //     description: "Developed and maintained web applications using React and Node.js. Collaborated with cross-functional teams to deliver high-quality software solutions."
+    // },
+    // {
+    //     company: "Innovative Apps",
+    //     position: "Frontend Developer",
+    //     duration: "Jun 2018 - Dec 2019",
+    //     description: "Designed and implemented user interfaces for web applications. Worked closely with designers to create visually appealing and user-friendly experiences."
+    // }
 ];
 
 const specialty = [
