@@ -1,15 +1,21 @@
 import React from "react";
 import "./IntroPage.css";
-import { message, name } from "./message";
 import Typewriter from "./TypeWriter";
-import portrait_picture from "../../photos/portrait_picture.jpg";
-import gmail_logo from "../../logos/gmail.png";
-import linkedin_logo from "../../logos/linkedin.png";
-import github_logo from "../../logos/github.png";
+import { person } from "../../person";
 
-const github = "https://github.com/nisaacdz";
-const linkedin = "https://www.linkedin.com/in/isaac-dzikum-401033225/";
-const gmail = "nisaacdz@gmail.com";
+const portrait_picture = `${process.env.PUBLIC_URL}/photos/portrait_picture.jpg`;
+const gmail_logo = `${process.env.PUBLIC_URL}/logos/gmail.png`;
+const linkedin_logo = `${process.env.PUBLIC_URL}/logos/linkedin.png`;
+const github_logo = `${process.env.PUBLIC_URL}/logos/github.png`;
+
+const message = {
+  hello: `Hello👋! My name is `,
+  message: `
+        I'm a student at the ${person.school}, ${person.location} 
+        pursuing a Bachelor of Science in ${person.program}.
+        I love to study problems and design, implement, and maintain solutions.
+    `,
+};
 
 const IntroPage = () => {
   const typeWriterStyles = {
@@ -26,15 +32,15 @@ const IntroPage = () => {
           alt="portrait-picture"
         />
         <div className="social-buttons">
-          <a href={`mailto:${gmail}`}>
+          <a href={`mailto:${person.email}`}>
             <img src={gmail_logo} alt="Gmail" />
           </a>
           <span className='divider'></span>
-          <a href={linkedin} target="_blank" rel="noopener noreferrer">
+          <a href={person.linkedin} target="_blank" rel="noopener noreferrer">
             <img src={linkedin_logo} alt="LinkedIn" />
           </a>
           <span className='divider'></span>
-          <a href={github} target="_blank" rel="noopener noreferrer">
+          <a href={person.github} target="_blank" rel="noopener noreferrer">
             <img src={github_logo} alt="GitHub" />
           </a>
         </div>
@@ -44,14 +50,14 @@ const IntroPage = () => {
           <div className="intro-text-hello">
             <p style={{ fontSize: "2rem" }}>
               {message.hello}
-              <span className="intro-text-name">{name}!</span>
+              <span className="intro-text-name">{person.name}!</span>
             </p>
           </div>
           <Typewriter
             text={message.message}
             delay={50}
             styles={typeWriterStyles}
-            workDomains={message.whatIDo}
+            workDomains={person.thingsIDo}
           />
         </div>
       </div>

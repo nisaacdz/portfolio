@@ -1,29 +1,6 @@
 import React from 'react';
 import './ExperiencePage.css';
-
-const experiences = [
-    // {
-    //     company: "Tech Solutions Inc.",
-    //     position: "Software Engineer",
-    //     duration: "Jan 2020 - Present",
-    //     description: "Developed and maintained web applications using React and Node.js. Collaborated with cross-functional teams to deliver high-quality software solutions."
-    // },
-    // {
-    //     company: "Innovative Apps",
-    //     position: "Frontend Developer",
-    //     duration: "Jun 2018 - Dec 2019",
-    //     description: "Designed and implemented user interfaces for web applications. Worked closely with designers to create visually appealing and user-friendly experiences."
-    // }
-];
-
-const linkedin = "https://www.linkedin.com/in/isaac-dzikum-401033225/";
-
-const specialty = [
-    "Practical experience in all stages of software development.",
-    "Expertise in low-level programming and memory management.",
-    "Problem solving skills and ability to identify and improve bad code.",
-    "High learning rate and peerless adaptation to fast-paced environments.",
-];
+import { person } from '../../person';
 
 const Experience = ({ company, position, duration, description }) => {
     return (
@@ -40,7 +17,7 @@ const ExperiencePage = () => {
         <div id="experience-page">
             <GetYourCompanyHere />
             <div className="experiences">
-                {experiences.map((exp, index) => (
+                {person.experiences.map((exp, index) => (
                     <Experience
                         key={index}
                         company={exp.company}
@@ -61,10 +38,10 @@ const GetYourCompanyHere = () => {
             <div>
                 <h2>What I can provide</h2>
                 <ul>
-                    {specialty.map((v, index) => <li key={index}>{v}</li>)}
+                    {person.specialty.map((v, index) => <li key={index}>{v}</li>)}
                 </ul>
             </div>
-            <a href={linkedin} target="_blank" rel="noopener noreferrer">Refer Me</a>
+            <a href={person.linkedin} target="_blank" rel="noopener noreferrer">Refer Me</a>
         </div>
     );
 };

@@ -1,16 +1,13 @@
 import React, { useEffect, useRef } from "react";
 import "./NavBar.css";
-import profile_photo from "./photos/profile_photo.jpeg";
+import { person } from "./person";
+
+const profile_photo = `${process.env.PUBLIC_URL}/photos/profile_photo.jpeg`;
 
 const introPageTitle = "Welcome to my portfolio";
 const projectsPageTitle = "My projects";
 const experiencePageTitle = "My experience";
 const resumePageTitle = "My resume";
-
-const youtube = "https://www.youtube.com/channel/UCf_6vvyIPM2wtGohdC68MKg";
-const github = "https://github.com/nisaacdz";
-const linkedin = "https://www.linkedin.com/in/isaac-dzikum-401033225/";
-const gmail = "nisaacdz@gmail.com";
 
 const NavBar = ({ pageIdx, updatePage, toggleTheme }) => {
   const [showPopup, setShowPopup] = React.useState(false);
@@ -102,11 +99,11 @@ const Popup = ({ show, onClose }) => {
     <div className="popup" ref={ref}>
       <ul>
         <li>
-          <a href={`mailto:${gmail}`}>Email me</a>
+          <a href={`mailto:${person.gmail}`}>Email me</a>
         </li>
         <li>
           <a
-            href={github}
+            href={person.github}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -115,7 +112,7 @@ const Popup = ({ show, onClose }) => {
         </li>
         <li>
           <a
-            href={linkedin}
+            href={person.linkedin}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -124,7 +121,7 @@ const Popup = ({ show, onClose }) => {
         </li>
         <li>
           <a
-            href={youtube}
+            href={person.youtube}
             target="_blank"
             rel="noopener noreferrer"
           >
