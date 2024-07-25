@@ -1,4 +1,4 @@
-export const name = "Isaac Newton";
+export const name = "Isaac";
 export const school = "University of Ghana, Legon";
 export const program = "Computer Science & Mathematics";
 const thingsIDo = [
