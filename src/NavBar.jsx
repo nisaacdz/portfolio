@@ -69,7 +69,7 @@ const NavBar = ({ pageIdx, updatePage, toggleTheme }) => {
       </ul>
       <div className="profile-photo">
         <img
-          src="../../../profile_photo.jpeg"
+          src="/profile_photo.jpeg"
           alt="Profile"
           onClick={handleProfileClick}
         />

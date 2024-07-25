@@ -2,20 +2,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px auto;
-    padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    max-width: 800px;
+    width: 100%;
+    height: 100%;
     background-color: var(--background_color3);
 }
 
 iframe {
     background-color: var(--background_color2);
     border-radius: 8px;
-    width: 500px;
-    height: 600px;
-    border: none;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    width: auto;
+    height: 100%;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }

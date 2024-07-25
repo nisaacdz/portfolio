@@ -16,6 +16,8 @@ const experiences = [
     // }
 ];
 
+const linkedin = "https://www.linkedin.com/in/isaac-dzikum-401033225/";
+
 const specialty = [
     "Practical experience in all stages of software development.",
     "Expertise in low-level programming and memory management.",
@@ -62,7 +64,7 @@ const GetYourCompanyHere = () => {
                     {specialty.map((v, index) => <li key={index}>{v}</li>)}
                 </ul>
             </div>
-            <a href="https://www.linkedin.com/in/" target="_blank" rel="noopener noreferrer">Refer Me</a>
+            <a href={linkedin} target="_blank" rel="noopener noreferrer">Refer Me</a>
         </div>
     );
 };

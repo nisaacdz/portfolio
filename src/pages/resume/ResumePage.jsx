@@ -1,7 +1,7 @@
 import React from 'react';
 import './ResumePage.css';
 
-const googleDocsLink = 'https://docs.google.com/document/d/1gUA2RCtFWmvcUJ5k1lK1CdYGV0AUNMvT8pyIt5ed7sY/preview';
+const googleDocsLink = 'https://docs.google.com/document/d/19YBRcPLhNuv2_PSSYJXquFnM9nl551V6k2xdjKzhN44/preview?usp=sharing';
 
 const ResumePage = () => {
     return (<div id="resume-container">
