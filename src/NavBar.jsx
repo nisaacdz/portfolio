@@ -39,7 +39,7 @@ const NavBar = ({ pageIdx, updatePage, toggleTheme }) => {
         <button className="theme-button" onClick={toggleTheme} title="toggle color themes"/>
         <h1 className="title-text">{titleText}</h1>
       </div>
-      <ul>
+      <ul className="nav-menus">
         <li
           className={pageIdx === 0 ? "activeTab" : "inactiveTab"}
           onClick={() => updatePage(0)}

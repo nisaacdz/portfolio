@@ -7,7 +7,7 @@ import ResumePage from "./pages/resume/ResumePage";
 import NavBar from "./NavBar";
 import { color_themes } from "./color_themes";
 
-const madeBy = "Isaac Newton";
+const madeBy = "nisaacdz";
 const year = "2024";
 
 function App() {

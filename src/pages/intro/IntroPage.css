@@ -16,13 +16,12 @@
   height: auto;
   border-radius: 50%;
   object-fit: cover;
-  border: 5px solid #fff;
+  border: 5px solid var(--foreground_color1);
 }
 
 .intro {
   width: 50%;
   height: 100%;
-  max-width: 50%;
   color: var(--foreground_color1);
   display: flex;
   align-items: start;
@@ -67,4 +66,29 @@
 
 .social-buttons img:hover {
   transform: scale(1.1);
+}
+
+
+@media (max-width: 768px) {
+  #intro-page {
+    flex-direction: column;
+  }
+
+  .portrait {
+    width: 100%;
+    height: auto;
+  }
+
+  .intro {
+    width: 100%;
+    min-height: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .intro-text-container {
+    text-align: left;
+    margin-top: 35px;
+  }
 }

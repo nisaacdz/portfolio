@@ -96,7 +96,7 @@
     color: white;
 }
 
-#navbar ul {
+#navbar .nav-menus {
     list-style-type: none;
     position: absolute;
     right: 55px;

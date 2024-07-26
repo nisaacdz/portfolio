@@ -13,7 +13,7 @@ const message = {
   message: `
         I'm a student at the ${person.school}, ${person.location} 
         pursuing a Bachelor of Science in ${person.program}.
-        I love to study problems and design, implement, and maintain solutions.
+        ${person.passion}
     `,
 };
 
