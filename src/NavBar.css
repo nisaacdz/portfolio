@@ -2,7 +2,6 @@
     position: relative;
     height: 100%;
     width: 100%;
-    overflow: hidden;
 }
 
 .profile-photo {
@@ -140,13 +139,24 @@
     .title-text {
         display: none;
     }
+    
+    .theme-button {
+        width: 40px;
+        height: 40px;
+    }
 
-    .popup {
-        display: none;
+    .page-title {
+        width: 50px;
+        height: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     #navbar .nav-menus {
-        left: 100px;
+        left: 50px;
         height: 100%;
         max-width: 8rem;
         display: flex;
@@ -160,7 +170,9 @@
         align-items: center;
         justify-content: center;
         height: calc(100% - 20px);
-        max-width: 8rem;
+        max-width: 4rem;
+        font-size: 0.9rem;
+        font-weight: bold;
         padding-right: 5px;
         padding-left: 5px;
     }
