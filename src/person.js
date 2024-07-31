@@ -37,8 +37,7 @@ export const person = {
     },
     {
       title: "News App",
-      description:
-        "Bloxel is a lecture board cross-platform application built with React, Tauri, C++, Python, Rust. Incoporates design chalks, straight line corrections and more. You can save your work and share it with others as pdf, jpeg or ppt.",
+      description: "A cross-platform app that provides summaries of latest news at various locations. Built with Egui.rs and wasm_bindgen. Fetches news from newsapi.org via REST api. Cached news are stored in SQLite database.",
       demo_link: `${public_url}/demos/demo_news.gif`,
       stack:
         "Egui.rs, serde & serde_json, REST api via newsapi.org, wasm_bindgen",
