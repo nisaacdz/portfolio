@@ -69,3 +69,21 @@
     margin: 5px 0;
     color: var(--foreground_color2);
 }
+
+.experience ul {
+    text-wrap: wrap;
+    width: calc(100%);
+    list-style: circle;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.experience ul>li {
+    margin-left: 20px;
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: var(--background_color2);
+    text-align: left;
+}

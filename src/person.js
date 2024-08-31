@@ -37,7 +37,8 @@ export const person = {
     },
     {
       title: "News App",
-      description: "A cross-platform app that provides summaries of latest news at various locations. Built with Egui.rs and wasm_bindgen. Fetches news from newsapi.org via REST api. Cached news are stored in SQLite database.",
+      description:
+        "A cross-platform app that provides summaries of latest news at various locations. Built with Egui.rs and wasm_bindgen. Fetches news from newsapi.org via REST api. Cached news are stored in SQLite database.",
       demo_link: `${public_url}/demos/demo_news.gif`,
       stack:
         "Egui.rs, serde & serde_json, REST api via newsapi.org, wasm_bindgen",
@@ -82,7 +83,18 @@ export const person = {
       codebase: "https://github.com/nisaacdz/medify",
     },
   ],
-  experiences: [],
+  experiences: [
+    {
+      company: "Tecunit Ghana",
+      position: "Frontend Developer",
+      duration: "From 28th August 2024 to present",
+      description: [
+        "Designed, developed and improved existing code for responsive, appealing, user-friendly web applications",
+        "Collaborated with cross-functional teams to identify and prioritize project requirements and fix client issues",
+        "Implemented accessibility and web performance optimization techniques to improve interface and experience",
+      ],
+    },
+  ],
   thingsIDo: [
     "Frontend Development",
     "Backend Development",
@@ -97,5 +109,5 @@ export const person = {
     "Problem solving skills and ability to identify and improve bad code.",
     "High learning rate and peerless adaptation to fast-paced environments.",
   ],
-  passion: "I love to study problems and design, implement, and maintain innovative solutions.",
+  passion: "I love to study problems and design and implement innovative solutions.",
 };

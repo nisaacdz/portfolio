@@ -7,7 +7,11 @@ const Experience = ({ company, position, duration, description }) => {
         <div className="experience">
             <h3>{position} at {company}</h3>
             <p>{duration}</p>
-            <p>{description}</p>
+            <ul>
+            {description.map((dsc, idx) => {
+                return <li key={idx}>{dsc}</li>
+            })}
+            </ul>
         </div>
     );
 };

@@ -33,44 +33,32 @@ const NavBar = ({ pageIdx, updatePage, toggleTheme }) => {
     titleText = resumePageTitle;
   }
 
+  const navMenus = ["Intro", "My Projects", "My Experience", "My Resume"];
+
   return (
     <nav id="navbar">
       <div className="page-title">
-        <button className="theme-button" onClick={toggleTheme} title="toggle color themes"/>
+        <button
+          className="theme-button"
+          onClick={toggleTheme}
+          title="toggle color themes"
+        />
         <h1 className="title-text">{titleText}</h1>
       </div>
       <ul className="nav-menus">
-        <li
-          className={pageIdx === 0 ? "activeTab" : "inactiveTab"}
-          onClick={() => updatePage(0)}
-        >
-          Intro
-        </li>
-        <li
-          className={pageIdx === 1 ? "activeTab" : "inactiveTab"}
-          onClick={() => updatePage(1)}
-        >
-          My projects
-        </li>
-        <li
-          className={pageIdx === 2 ? "activeTab" : "inactiveTab"}
-          onClick={() => updatePage(2)}
-        >
-          My Experience
-        </li>
-        <li
-          className={pageIdx === 3 ? "activeTab" : "inactiveTab"}
-          onClick={() => updatePage(3)}
-        >
-          My Resume
-        </li>
+        {navMenus.map((menuName, idx) => {
+          return (
+            <li
+              className={pageIdx === idx ? "activeTab" : "inactiveTab"}
+              onClick={() => updatePage(idx)}
+            >
+              {menuName}
+            </li>
+          );
+        })}
       </ul>
       <div className="profile-photo">
-        <img
-          src={profile_photo}
-          alt="Profile"
-          onClick={handleProfileClick}
-        />
+        <img src={profile_photo} alt="Profile" onClick={handleProfileClick} />
       </div>
       <Popup show={showPopup} onClose={onClosePopup} />
     </nav>
@@ -102,29 +90,17 @@ const Popup = ({ show, onClose }) => {
           <a href={`mailto:${person.gmail}`}>Email me</a>
         </li>
         <li>
-          <a
-            href={person.github}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href={person.github} target="_blank" rel="noopener noreferrer">
             Follow me on GitHub
           </a>
         </li>
         <li>
-          <a
-            href={person.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href={person.linkedin} target="_blank" rel="noopener noreferrer">
             Connect on LinkedIn
           </a>
         </li>
         <li>
-          <a
-            href={person.youtube}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href={person.youtube} target="_blank" rel="noopener noreferrer">
             Watch my youtube
           </a>
         </li>

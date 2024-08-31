@@ -11,10 +11,8 @@
 
 iframe {
     background-color: var(--background_color2);
-    border-radius: 8px;
-    width: auto;
     height: 100%;
     width: 100%;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
