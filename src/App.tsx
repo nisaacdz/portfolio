@@ -7,7 +7,7 @@ import { usePortfolioOwner } from "./hooks/usePortfolioOwner";
 export default function App() {
   const { person, loading, error } = usePortfolioOwner();
   return (
-    <main className="w-screen h-screen bg-background">
+    <main className="w-screen h-screen overflow-y-auto">
       <TooltipProvider>
         {loading ? (
           <PageLoader />

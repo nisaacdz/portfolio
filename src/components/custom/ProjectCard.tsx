@@ -7,13 +7,13 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Card } from "@/components/ui/card";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { useEffect, useRef } from "react";
 import { Project } from "@/types";
+import { Minus } from "lucide-react";
 
 export default function ProjectCard({
   project: {
     title,
+    slug,
     summary,
     details,
     repositoryUrl,
@@ -32,7 +32,7 @@ export default function ProjectCard({
   active: boolean;
 }) {
   return (
-    <article className="group relative flex flex-col overflow-hidden rounded-xl border bg-card shadow-sm transition-all hover:shadow-md">
+    <Card className="relative w-[90%] md:w-[640px] h-auto rounded-sm">
       {/* Status & Tags Header */}
       <div className="absolute top-0 z-20 flex w-full items-start justify-between p-2">
         <div className="flex flex-wrap gap-1">
@@ -59,13 +59,11 @@ export default function ProjectCard({
 
       {/* Media Section */}
       <div className="relative bg-muted">
-        <AspectRatio ratio={16 / 9}>
-          <ProjectMedia
-            thumbnailUrl={thumbnailUrl}
-            demoUrl={demoUrl}
-            keepPlaying={active}
-          />
-        </AspectRatio>
+        <ProjectMedia
+          thumbnailUrl={thumbnailUrl}
+          demoUrl={demoUrl}
+          keepPlaying={active}
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 via-transparent to-transparent" />
       </div>
 
@@ -75,10 +73,17 @@ export default function ProjectCard({
           <div className="flex items-start justify-between gap-2">
             <Tooltip>
               <TooltipTrigger asChild>
-                <div className="hover:underline focus-visible:underline focus-visible:outline-none">
-                  <h3 className="text-lg font-semibold leading-tight">
-                    {title}
+                <div className="flex items-center">
+                  <h3 className="hover:underline focus-visible:underline focus-visible:outline-none text-lg font-semibold leading-tight">
+                    {slug}
                   </h3>
+                  <Minus className="size-4 text-muted-foreground mx-2" />
+                  <Badge
+                    variant="secondary"
+                    className="px-2 py-1 text-base font-medium"
+                  >
+                    {title}
+                  </Badge>
                 </div>
               </TooltipTrigger>
               <TooltipContent>View project details</TooltipContent>
@@ -234,7 +239,7 @@ export default function ProjectCard({
           )}
         </div>
       </div>
-    </article>
+    </Card>
   );
 }
 
@@ -249,40 +254,18 @@ const ProjectMedia = ({
   demoUrl,
   keepPlaying,
 }: ProjectMediaProps) => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    if (!videoRef.current) return;
-
-    if (keepPlaying) {
-      videoRef.current.play().catch(() => {});
-    } else {
-      videoRef.current.pause();
-      videoRef.current.currentTime = 0;
-    }
-  }, [keepPlaying]);
-
   return (
-    <div className="w-full h-full bg-red-500">
-      {keepPlaying ? (
-        <img
-          src={thumbnailUrl}
-          alt="Project preview"
-          className="h-full w-full object-cover"
-          loading="lazy"
-        />
-      ) : (
-        <video
-          ref={videoRef}
-          src={demoUrl}
-          poster={thumbnailUrl}
-          muted
-          loop
-          className="h-full w-full object-cover"
-          playsInline
-          disablePictureInPicture
-        />
-      )}
+    <div className="w-full h-[360px]">
+      <video
+        src={demoUrl}
+        poster={thumbnailUrl}
+        muted
+        loop={keepPlaying}
+        autoPlay={keepPlaying}
+        className="h-full w-full object-contain"
+        playsInline
+        disablePictureInPicture
+      />
     </div>
   );
 };
