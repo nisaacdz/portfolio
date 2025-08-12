@@ -1,0 +1,210 @@
+{
+  "name": "Isaac Newton Dzikum",
+  "title": "Software Engineer & Computer Science Student",
+  "email": "nisaacdz@gmail.com",
+  "phone": "(+233) 55 943 2038",
+  "location": "Accra, Ghana",
+  "github": "https://github.com/nisaacdz",
+  "linkedin": "https://www.linkedin.com/in/isaac-dzikum-401033225/",
+  "portfolio": "https://isaacdzikum.dev",
+  "bio": "A software engineer driven by a fundamental curiosity for how software works at its most foundational level. This passion, sparked by automating complex engineering problems, led me to dedicate my career to computer science with a focus on systems programming and design. I thrive on wrestling with the intricate challenges of performance, concurrency, and scalability, aiming to build solutions that are not just functional, but architecturally elegant and ruthlessly efficient. My ambition is to master the craft of engineering and become a Software Architect who builds systems that last.",
+  "education": {
+    "degree": "Bachelor of Science in Computer Science",
+    "school": "University of Ghana, Legon",
+    "period": "2023 - 2027",
+    "gpa": "3.88/4.0",
+    "relevantCourses": [
+      "Software Engineering",
+      "Data Structures & Algorithms",
+      "Computer Architecture",
+      "Database Systems",
+      "Computer Networks",
+      "Machine Learning"
+    ]
+  },
+  "experience": [
+    {
+      "role": "Software Engineer",
+      "company": "Proxymove",
+      "period": "November 2024 - Present",
+      "location": "Accra, Ghana",
+      "details": [
+        "Develop and maintain full-stack features using a modern stack including Hono.js, Drizzle ORM, Remix, and React within a Turborepo monorepo.",
+        "Write robust API endpoints to handle core application logic and interact securely with PostgreSQL databases.",
+        "Collaborate with cross-functional teams to drive project development from planning stages to the deployment of the first MVP.",
+        "Establish and maintain a CI/CD pipeline with GitHub Actions to automate testing and deployment, improving code quality and release velocity."
+      ]
+    },
+    {
+      "role": "Frontend Developer Intern",
+      "company": "Tecunit Ghana",
+      "period": "August 2024 - November 2024",
+      "location": "Remote",
+      "details": [
+        "Translated Figma designs into responsive, pixel-perfect frontend code using Next.js, React, and Tailwind CSS.",
+        "Developed and integrated frontend logic to handle API requests, ensuring seamless interaction between the client and server.",
+        "Enhanced application performance and user experience by implementing key web optimizations, including pagination, code splitting, and caching strategies."
+      ]
+    }
+  ],
+  "skills": {
+    "Languages": [
+      "Rust",
+      "TypeScript/JavaScript",
+      "C++",
+      "Python",
+      "Java",
+      "SQL",
+      "Go",
+      "HTML/CSS"
+    ],
+    "Frameworks & Libraries": [
+      "React",
+      "Next.js",
+      "Remix.js",
+      "Node.js",
+      "HonoJS",
+      "Express",
+      "Axum",
+      "Tauri",
+      "React-Native",
+      "Tailwind CSS",
+      "Material-UI",
+      "Prisma ORM",
+      "Drizzle ORM",
+      "Socket.io",
+      "PyTorch"
+    ],
+    "Tools & Technologies": [
+      "Git/GitHub",
+      "Docker",
+      "Azure",
+      "Digital Ocean",
+      "PostgreSQL",
+      "Redis",
+      "SQLite",
+      "WebSockets",
+      "Turborepo",
+      "FFMPEG",
+      "CI/CD"
+    ],
+    "Concepts": [
+      "System Design",
+      "Systems Programming",
+      "Software Architecture",
+      "Full Stack Development",
+      "Performance Optimization",
+      "Multithreading",
+      "Low-level Programming",
+      "RESTful APIs",
+      "Agile Development"
+    ]
+  },
+  "projects": [
+    {
+      "title": "Real-Time Typing Arena (Yuxi)",
+      "shortDescription": "A high-performance, real-time multiplayer typing arena engineered for massive concurrency with a Rust and React stack.",
+      "longDescription": "Engineered a high-performance real-time multiplayer typing arena using Rust. The backend leverages Axum for REST APIs and a sophisticated WebSocket implementation for real-time communication, architected for both vertical and horizontal scaling. I designed a concurrent actor model to manage game state, user sessions, and event broadcasting, and implemented an adaptive input throttling system to intelligently batch high-frequency user events, slashing server load while preserving a fluid, real-time user experience. The system was benchmarked to handle over 10,000 concurrent WebSocket connections with sub-50ms latency on Azure Container Apps.",
+      "technologies": [
+        "Rust",
+        "Axum",
+        "WebSockets",
+        "React",
+        "TypeScript",
+        "Azure",
+        "Docker",
+        "Scalability"
+      ],
+      "thumbnail": "yuxi.gif",
+      "demoLink": "https://drive.google.com/file/d/1ABC123/view",
+      "githubLink": "https://github.com/nisaacdz/yuxi",
+      "liveLink": ""
+    },
+    {
+      "title": "Dwello - Property Management System",
+      "shortDescription": "A sophisticated, multi-tenant property management system designed to streamline operations for property managers, tenants, and vendors.",
+      "longDescription": "Led a 5-student team to develop a full-stack tenant management system to tackle lease disputes and property mismanagement in Ghana. The system features a multi-tenant architecture with an Express.js backend using Prisma and PostgreSQL. The frontend consists of three separate, dedicated consoles for Staff, Tenants, and Vendors, all managed within a Turborepo monorepo and built with React Router v7's framework mode and Material-UI. I personally built the backend, led the team, and set up a CI/CD pipeline with GitHub Actions to ensure code quality and accelerate release velocity. The platform is deployed on Digital Ocean.",
+      "technologies": [
+        "Express",
+        "Prisma ORM",
+        "React Router",
+        "PostgreSQL",
+        "TurboRepo",
+        "Material-UI",
+        "Digital Ocean",
+        "CI/CD"
+      ],
+      "thumbnail": "dwello.gif",
+      "demoLink": "https://drive.google.com/file/d/1DEF456/view",
+      "githubLink": "https://github.com/npquestlabs/sl-core",
+      "liveLink": ""
+    },
+    {
+      "title": "Bloxel - Digital Chalkboard",
+      "shortDescription": "An award-winning digital chalkboard with a realistic chalk feel, designed for low CPU usage on lecture hall systems.",
+      "longDescription": "Developed a high-performance digital chalkboard application with a custom algorithm for alpha compositing to simulate the layering of design chalks. The app also features algorithms for straight line correction and curve interpolation. To address system overheating in college lecture halls, I leveraged the HTML Canvas API with batch processing to offload intensive rendering computations to the GPU. The application is built with React, Tauri, and Rust, using FFI to bridge the high-performance backend with the UI.",
+      "technologies": [
+        "React",
+        "HTML Canvas API",
+        "Tauri",
+        "Rust",
+        "C++",
+        "FFI"
+      ],
+      "thumbnail": "bloxel.gif",
+      "demoLink": "https://drive.google.com/file/d/1GHI789/view",
+      "githubLink": "https://github.com/nisaacdz/bloxel",
+      "liveLink": ""
+    },
+    {
+      "title": "XLab - Cross-Platform Screen Recorder",
+      "shortDescription": "A high-performance, cross-platform screen recorder built from scratch using Rust, Tauri, and FFMPEG.",
+      "longDescription": "Engineered a multi-threaded screen recording application from the ground up that efficiently captures, processes, and encodes frames with configurable parameters. The core logic is written in Rust for maximum performance and memory safety, with a simple React frontend presented in a Tauri window. A key feature is its efficient session management system, which handles temporary caching of frame data to the file system, ensuring constant, non-increasing memory usage during long recording sessions.",
+      "technologies": [
+        "Tauri",
+        "Rust",
+        "FFMPEG",
+        "React",
+        "Multithreading",
+        "C ABI"
+      ],
+      "thumbnail": "xlab.gif",
+      "demoLink": "https://drive.google.com/file/d/1JKL012/view",
+      "githubLink": "https://github.com/nisaacdz/xlab",
+      "liveLink": ""
+    },
+    {
+      "title": "Pitou - File Explorer & Manager",
+      "shortDescription": "A feature-rich file explorer and manager for Windows, built with Tauri, Rust, and a Yew.rs frontend.",
+      "longDescription": "A custom file explorer desktop application designed to be fast and resource-efficient. It includes all common file operations plus advanced features like a secure folder vault, a custom recycle bin, advanced file search capabilities, file access history, and the ability to roll back actions. The entire application is built using a Rust backend with Tauri and a frontend written in Rust using the Yew.rs framework.",
+      "technologies": [
+        "Tauri",
+        "Rust",
+        "Yew.rs",
+        "SQLite",
+        "HTML/CSS"
+      ],
+      "thumbnail": "pitou.gif",
+      "demoLink": "https://drive.google.com/file/d/1MNO345/view",
+      "githubLink": "https://github.com/nisaacdz/pitou",
+      "liveLink": ""
+    },
+    {
+      "title": "Open Source Rust Libraries",
+      "shortDescription": "Published Rust libraries (crates) for common data structures and cryptographic operations, with thousands of downloads on crates.io.",
+      "longDescription": "Contributed to the open-source ecosystem by developing and publishing practical Rust libraries. This includes 'blockify', a library for essential cryptographic operations like key generation, data signing, and signature verification, and 'b_trees', a library providing efficient, AVL Tree-based data structures like ordered maps. These libraries have been downloaded thousands of times by other developers from the official Rust package registry, crates.io.",
+      "technologies": [
+        "Rust",
+        "Crates.io",
+        "Cryptography",
+        "Data Structures",
+        "AVL Trees",
+        "Open Source"
+      ],
+      "thumbnail": "opensource.gif",
+      "demoLink": "https://drive.google.com/file/d/1PQR678/view",
+      "githubLink": "https://github.com/nisaacdz",
+      "liveLink": "https://crates.io/users/nisaacdz"
+    }
+  ]
+}
