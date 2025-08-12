@@ -45,7 +45,7 @@ export const usePortfolioData = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/person.json');
+        const response = await fetch('/portfolio/person.json');
         if (!response.ok) {
           throw new Error('Failed to fetch portfolio data');
         }
