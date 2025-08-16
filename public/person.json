@@ -7,7 +7,7 @@
   "github": "https://github.com/nisaacdz",
   "linkedin": "https://www.linkedin.com/in/isaac-dzikum-401033225/",
   "portfolio": "https://isaacdzikum.dev",
-  "bio": "A software engineer driven by a fundamental curiosity for how software works at its most foundational level. This passion, sparked by automating complex engineering problems, led me to dedicate my career to computer science with a focus on systems programming and design. I thrive on wrestling with the intricate challenges of performance, concurrency, and scalability, aiming to build solutions that are not just functional, but architecturally elegant and ruthlessly efficient. My ambition is to master the craft of engineering and become a Software Architect who builds systems that last.",
+  "bio": "A software engineer driven by a fundamental curiosity for how software works at its most foundational level. This passion, sparked by automating complex engineering problems, led me to dedicate my career to computer science with a focus on software design and architecture. I thrive on wrestling with the intricate challenges of performance, concurrency, and scalability, aiming to build solutions that are not just functional, but architecturally elegant and ruthlessly efficient. My ambition is to master the craft of engineering and become a Software Architect who builds systems that last.",
   "education": {
     "degree": "Bachelor of Science in Computer Science",
     "school": "University of Ghana, Legon",
@@ -118,7 +118,7 @@
       "thumbnail": "yuxi.gif",
       "demoLink": "https://drive.google.com/file/d/1ABC123/view",
       "githubLink": "https://github.com/nisaacdz/yuxi",
-      "liveLink": ""
+      "liveLink": "https://icy-hill-007f8eb0f.2.azurestaticapps.net"
     },
     {
       "title": "Dwello - Property Management System",
@@ -137,7 +137,7 @@
       "thumbnail": "dwello.gif",
       "demoLink": "https://drive.google.com/file/d/1DEF456/view",
       "githubLink": "https://github.com/npquestlabs/sl-core",
-      "liveLink": ""
+      "liveLink": "https://sl-web-landlord.vercel.app"
     },
     {
       "title": "Bloxel - Digital Chalkboard",
@@ -169,7 +169,7 @@
         "C ABI"
       ],
       "thumbnail": "xlab.gif",
-      "demoLink": "https://drive.google.com/file/d/1JKL012/view",
+      "demoLink": "https://drive.google.com/file/d/17NgnN9suvLvv30PRa4la5Nn5BUp0QhI1/view",
       "githubLink": "https://github.com/nisaacdz/xlab",
       "liveLink": ""
     },

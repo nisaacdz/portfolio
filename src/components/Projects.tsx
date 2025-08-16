@@ -1,11 +1,11 @@
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
-import { useRef, useState } from "react";
+import { motion, useInView } from "framer-motion";
+import { useRef, useState, useEffect } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Github, ExternalLink, Play } from "lucide-react";
+import { AspectRatio } from "./ui/aspect-ratio";
 
 interface Project {
   title: string;
@@ -24,8 +24,23 @@ interface ProjectsProps {
 
 const ProjectCard = ({ project, index }: { project: Project; index: number }) => {
   const ref = useRef(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      if (isHovered) {
+        videoRef.current.play().catch(e => console.error("Autoplay failed", e));
+      } else {
+        videoRef.current.pause();
+        videoRef.current.currentTime = 0;
+      }
+    }
+  }, [isHovered]);
+
+  const isVideo = project.thumbnail.endsWith(".mp4");
 
   return (
     <motion.div
@@ -34,11 +49,32 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
     >
-      <Card className="h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+      <Card
+        className="h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1 overflow-hidden" // overflow-hidden is key for rounded corners
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
         <CardHeader>
-          {/* Placeholder for thumbnail */}
-          <div className="w-full h-48 bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg mb-4 flex items-center justify-center">
-            <span className="text-muted-foreground text-sm">Project Preview</span>
+          {/* ✨ CLEANER IMPLEMENTATION ✨ */}
+          <div className="mb-4">
+            <AspectRatio ratio={16 / 9} className="rounded-lg">
+              {isVideo ? (
+                <video
+                  ref={videoRef}
+                  src={`/portfolio/thumbnails/${project.thumbnail}`}
+                  muted
+                  loop
+                  playsInline
+                  className="w-full h-full object-cover" // object-cover works perfectly here
+                />
+              ) : (
+                <img
+                  src={`/portfolio/thumbnails/${project.thumbnail}`}
+                  alt={`Preview of ${project.title}`}
+                  className="w-full h-full object-cover"
+                />
+              )}
+            </AspectRatio>
           </div>
           
           <CardTitle className="text-xl font-semibold">{project.title}</CardTitle>
@@ -47,7 +83,7 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
           </CardDescription>
         </CardHeader>
         
-        <CardContent className="space-y-4">
+        <CardContent className="space-y-4 pt-0"> {/* Adjusted padding to avoid large gap */}
           <div className="flex flex-wrap gap-1">
             {project.technologies.slice(0, 4).map((tech) => (
               <Badge key={tech} variant="outline" className="text-xs">
